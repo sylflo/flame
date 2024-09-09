@@ -4,3 +4,13 @@ public
 k8s
 skaffold.yaml
 data
+.dev
+.docker
+.dockerignore
+.git
+.gitignore
+.prettierignore
+.prettierrc
+.CHANGELOG.md
+LICENSE.md
+README.md
