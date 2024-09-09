@@ -33,9 +33,11 @@ docker pull pawelmalak/flame:2.0.0
 
 #### Deployment
 
+You have to generate a 64 random string
+
 ```sh
 # run container
-docker run -p 5005:5005 -v /path/to/data:/app/data -e PASSWORD=flame_password pawelmalak/flame
+docker run -p 5005:5005 -v /path/to/data:/app/data -e PASSWORD=flame_password SECRET=yourRandom64String pawelmalak/flame
 ```
 
 #### Building images
@@ -71,6 +73,7 @@ services:
     environment:
       - PASSWORD=flame_password
       - PASSWORD_FILE=/run/secrets/password # optional but required for (1)
+      - SECRET=yourRandom64String
     restart: unless-stopped
 
 # optional but required for Docker secrets (1)
