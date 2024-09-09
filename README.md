@@ -19,16 +19,16 @@ Flame is self-hosted startpage for your server. Its design is inspired (heavily)
 
 ### With Docker (recommended)
 
-[Docker Hub link](https://hub.docker.com/r/pawelmalak/flame)
+[Docker Hub link](https://hub.docker.com/r/sylflo/flame)
 
 ```sh
-docker pull pawelmalak/flame
+docker pull sylflo/flame
 
 # for ARM architecture (e.g. RaspberryPi)
-docker pull pawelmalak/flame:multiarch
+docker pull sylflo/flame:multiarch
 
 # installing specific version
-docker pull pawelmalak/flame:2.0.0
+docker pull sylflo/flame:2.0.0
 ```
 
 #### Deployment
@@ -37,7 +37,7 @@ You have to generate a 64 random string
 
 ```sh
 # run container
-docker run -p 5005:5005 -v /path/to/data:/app/data -e PASSWORD=flame_password SECRET=yourRandom64String pawelmalak/flame
+docker run -p 5005:5005 -v /path/to/data:/app/data -e PASSWORD=flame_password SECRET=yourRandom64String sylflo/flame
 ```
 
 #### Building images
@@ -61,7 +61,7 @@ version: '3.6'
 
 services:
   flame:
-    image: pawelmalak/flame
+    image: sylflo/flame
     container_name: flame
     volumes:
       - /path/to/host/data:/app/data
@@ -105,7 +105,7 @@ skaffold dev
 
 ### Without Docker
 
-Follow instructions from wiki: [Installation without Docker](https://github.com/pawelmalak/flame/wiki/Installation-without-docker)
+Follow instructions from wiki: [Installation without Docker](https://github.com/sylflo/flame/wiki/Installation-without-docker)
 
 ## Development
 
@@ -126,7 +126,7 @@ Follow instructions from wiki: [Installation without Docker](https://github.com/
 
 ```sh
 # clone repository
-git clone https://github.com/pawelmalak/flame
+git clone https://github.com/sylflo/flame
 cd flame
 
 # run only once
@@ -150,7 +150,7 @@ npm run dev
 
 ### Authentication
 
-Visit [project wiki](https://github.com/pawelmalak/flame/wiki/Authentication) to read more about authentication
+Visit [project wiki](https://github.com/sylflo/flame/wiki/Authentication) to read more about authentication
 
 ### Search bar
 
@@ -158,7 +158,7 @@ Visit [project wiki](https://github.com/pawelmalak/flame/wiki/Authentication) to
 
 The default search setting is to search through all your apps and bookmarks. If you want to search using specific search engine, you need to type your search query with selected prefix. For example, to search for "what is docker" using google search you would type: `/g what is docker`.
 
-For list of supported search engines, shortcuts and more about searching functionality visit [project wiki](https://github.com/pawelmalak/flame/wiki/Search-bar).
+For list of supported search engines, shortcuts and more about searching functionality visit [project wiki](https://github.com/sylflo/flame/wiki/Search-bar).
 
 ### Setting up weather module
 
@@ -248,4 +248,4 @@ python3 bookmarks_importer.py --bookmarks <path to bookmarks.html> --data <path 
 
 ### Custom CSS and themes
 
-See project wiki for [Custom CSS](https://github.com/pawelmalak/flame/wiki/Custom-CSS) and [Custom theme with CSS](https://github.com/pawelmalak/flame/wiki/Custom-theme-with-CSS).
+See project wiki for [Custom CSS](https://github.com/sylflo/flame/wiki/Custom-CSS) and [Custom theme with CSS](https://github.com/sylflo/flame/wiki/Custom-theme-with-CSS).
