@@ -26,16 +26,14 @@ const getExternalWeather = async () => {
       isDay: Boolean(cursor.is_day),
       cloud: cursor.cloud_cover,
       conditionText: '',
-      conditionCode: 1, // cursor.weathercode
+      conditionCode: cursor.weathercode,
       humidity: cursor.relative_humidity_2m,
       windK: cursor.wind_speed_10m,
       windM: cursor.wind_speed_10m,
     });
     return weatherData;
   } catch (err) {
-    // TODO to update
-    throw new Error(err);
-    //throw new Error('External API request failed');
+    throw new Error('External API request failed');
   }
 };
 
