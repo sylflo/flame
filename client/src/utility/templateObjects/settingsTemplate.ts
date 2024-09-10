@@ -23,7 +23,7 @@ export const uiSettingsTemplate: UISettingsForm = {
 };
 
 export const weatherSettingsTemplate: WeatherForm = {
-  WEATHER_API_KEY: '',
+  weather_enabled: false,
   lat: 0,
   long: 0,
   isCelsius: true,

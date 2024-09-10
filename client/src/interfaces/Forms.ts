@@ -1,7 +1,7 @@
 import { WeatherData } from '../types';
 
 export interface WeatherForm {
-  WEATHER_API_KEY: string;
+  weather_enabled: boolean;
   lat: number;
   long: number;
   isCelsius: boolean;

@@ -7,9 +7,9 @@ const loadConfig = require('./loadConfig');
 const logger = new Logger();
 
 module.exports = async function () {
-  const { WEATHER_API_KEY } = await loadConfig();
+  const { weather_enabled } = await loadConfig();
 
-  if (WEATHER_API_KEY != '') {
+  if (weather_enabled) {
     // Update weather data every 15 minutes
     const weatherJob = schedule.scheduleJob(
       'updateWeather',
@@ -20,7 +20,7 @@ module.exports = async function () {
 
           Sockets.getSocket('weather').socket.send(JSON.stringify(weatherData));
         } catch (err) {
-          if (WEATHER_API_KEY) {
+          if (weather_enabled) {
             logger.log(err.message, 'ERROR');
           }
         }

@@ -58,7 +58,7 @@ export const WeatherWidget = (): JSX.Element => {
   return (
     <div className={classes.WeatherWidget}>
       {configLoading ||
-        (config.WEATHER_API_KEY && weather.id > 0 && (
+        (config.weather_enabled && weather.id > 0 && (
           <Fragment>
             <div className={classes.WeatherIcon}>
               <WeatherIcon

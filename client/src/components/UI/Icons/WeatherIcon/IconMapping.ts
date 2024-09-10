@@ -16,341 +16,173 @@ export enum TimeOfDay {
 export class IconMapping {
   private conditions: WeatherCondition[] = [
     {
-      code: 1000,
-      icon: {
-        day: 'clear-day',
-        night: 'clear-night'
-      }
-    },
-    {
-      code: 1003,
-      icon: {
-        day: 'partly-cloudy-day',
-        night: 'partly-cloudy-night'
-      }
-    },
-    {
-      code: 1006,
-      icon: {
-        day: 'cloudy',
-        night: 'cloudy'
-      }
-    },
-    {
-      code: 1009,
-      icon: {
-        day: 'cloudy',
-        night: 'cloudy'
-      }
-    },
-    {
-      code: 1030,
+      code: 45,
       icon: {
         day: 'fog',
         night: 'fog'
       }
-    },
-    {
-      code: 1063,
-      icon: {
-        day: 'rain-day',
-        night: 'rain-night'
-      }
-    },
-    {
-      code: 1066,
-      icon: {
-        day: 'snow-day',
-        night: 'snow-night'
-      }
-    },
-    {
-      code: 1069,
-      icon: {
-        day: 'rain-snow-day',
-        night: 'rain-snow-night'
-      }
-    },
-    {
-      code: 1072,
-      icon: {
-        day: 'sleet',
-        night: 'sleet'
-      }
-    },
-    {
-      code: 1087,
-      icon: {
-        day: 'thunder-day',
-        night: 'thunder-night'
-      }
-    },
-    {
-      code: 1114,
-      icon: {
-        day: 'snow',
-        night: 'snow'
-      }
-    },
-    {
-      code: 1117,
-      icon: {
-        day: 'snow',
-        night: 'snow'
-      }
-    },
-    {
-      code: 1135,
+   },
+   {
+      code: 48,
       icon: {
         day: 'fog',
         night: 'fog'
       }
-    },
-    {
-      code: 1147,
-      icon: {
-        day: 'fog',
-        night: 'fog'
-      }
-    },
-    {
-      code: 1150,
-      icon: {
-        day: 'rain',
-        night: 'rain'
-      }
-    },
-    {
-      code: 1153,
-      icon: {
-        day: 'rain',
-        night: 'rain'
-      }
-    },
-    {
-      code: 1168,
-      icon: {
-        day: 'sleet',
-        night: 'sleet'
-      }
-    },
-    {
-      code: 1171,
-      icon: {
-        day: 'sleet',
-        night: 'sleet'
-      }
-    },
-    {
-      code: 1180,
+   },
+   {
+      code: 51,
       icon: {
         day: 'rain-day',
         night: 'rain-night'
       }
-    },
-    {
-      code: 1183,
-      icon: {
-        day: 'rain',
-        night: 'rain'
-      }
-    },
-    {
-      code: 1186,
+   },
+   {
+      code: 53,
       icon: {
         day: 'rain-day',
         night: 'rain-night'
       }
-    },
-    {
-      code: 1189,
-      icon: {
-        day: 'rain',
-        night: 'rain'
-      }
-    },
-    {
-      code: 1192,
+   },
+   {
+      code: 55,
       icon: {
         day: 'rain-day',
         night: 'rain-night'
       }
-    },
-    {
-      code: 1195,
-      icon: {
-        day: 'rain',
-        night: 'rain'
-      }
-    },
-    {
-      code: 1198,
-      icon: {
-        day: 'sleet',
-        night: 'sleet'
-      }
-    },
-    {
-      code: 1201,
-      icon: {
-        day: 'sleet',
-        night: 'sleet'
-      }
-    },
-    {
-      code: 1204,
-      icon: {
-        day: 'rain-snow',
-        night: 'rain-snow'
-      }
-    },
-    {
-      code: 1207,
-      icon: {
-        day: 'rain-snow',
-        night: 'rain-snow'
-      }
-    },
-    {
-      code: 1210,
-      icon: {
-        day: 'snow-day',
-        night: 'snow-night'
-      }
-    },
-    {
-      code: 1213,
-      icon: {
-        day: 'snow',
-        night: 'snow'
-      }
-    },
-    {
-      code: 1216,
-      icon: {
-        day: 'snow-day',
-        night: 'snow-night'
-      }
-    },
-    {
-      code: 1219,
-      icon: {
-        day: 'snow',
-        night: 'snow'
-      }
-    },
-    {
-      code: 1222,
-      icon: {
-        day: 'snow-day',
-        night: 'snow-night'
-      }
-    },
-    {
-      code: 1225,
-      icon: {
-        day: 'snow',
-        night: 'snow'
-      }
-    },
-    {
-      code: 1237,
-      icon: {
-        day: 'hail',
-        night: 'hail'
-      }
-    },
-    {
-      code: 1240,
+   },
+   {
+      code: 56,
       icon: {
         day: 'rain-day',
         night: 'rain-night'
       }
-    },
-    {
-      code: 1243,
+   },
+   {
+      code: 57,
       icon: {
         day: 'rain-day',
         night: 'rain-night'
       }
-    },
-    {
-      code: 1246,
+   },
+   {
+      code: 61,
       icon: {
         day: 'rain-day',
         night: 'rain-night'
       }
-    },
-    {
-      code: 1249,
+   },
+   {
+      code: 63,
       icon: {
-        day: 'rain-snow-day',
-        night: 'rain-snow-night'
+        day: 'rain-day',
+        night: 'rain-night'
       }
-    },
-    {
-      code: 1252,
+   },
+   {
+      code: 65,
       icon: {
-        day: 'rain-snow-day',
-        night: 'rain-snow-night'
+        day: 'rain-day',
+        night: 'rain-night'
       }
-    },
-    {
-      code: 1255,
+   },
+   {
+      code: 66,
       icon: {
-        day: 'snow-day',
-        night: 'snow-night'
+        day: 'rain-day',
+        night: 'rain-night'
       }
-    },
-    {
-      code: 1258,
+   },
+   {
+      code: 67,
       icon: {
-        day: 'snow-day',
-        night: 'snow-night'
+        day: 'rain-day',
+        night: 'rain-night'
       }
-    },
-    {
-      code: 1261,
-      icon: {
-        day: 'hail',
-        night: 'hail'
-      }
-    },
-    {
-      code: 1264,
-      icon: {
-        day: 'hail',
-        night: 'hail'
-      }
-    },
-    {
-      code: 1273,
-      icon: {
-        day: 'thunder-rain-day',
-        night: 'thunder-rain-night'
-      }
-    },
-    {
-      code: 1276,
-      icon: {
-        day: 'thunder-rain',
-        night: 'thunder-rain'
-      }
-    },
-    {
-      code: 1279,
-      icon: {
-        day: 'thunder-day',
-        night: 'thunder-night'
-      }
-    },
-    {
-      code: 1282,
-      icon: {
-        day: 'thunder',
-        night: 'thunder'
-      }
-    }
+   },
+   {
+       code: 71,
+       icon: {
+         day: 'snow-day',
+         night: 'snow-night'
+       }
+   },
+   {
+       code: 73,
+       icon: {
+         day: 'snow-day',
+         night: 'snow-night'
+       }
+   }, 
+   {
+       code: 75,
+       icon: {
+         day: 'snow-day',
+         night: 'snow-night'
+       }
+   }, 
+   {
+       code: 77,
+       icon: {
+         day: 'snow-day',
+         night: 'snow-night'
+       }
+   }, 
+   {
+       code: 80,
+       icon: {
+         day: 'rain-day',
+         night: 'rain-night'
+       }
+   }, 
+   {
+       code: 81,
+       icon: {
+         day: 'rain-day',
+         night: 'rain-night'
+       }
+   }, 
+   {
+       code: 82,
+       icon: {
+         day: 'rain-day',
+         night: 'rain-night'
+       }
+   }, 
+   {
+       code: 85,
+       icon: {
+         day: 'snow-day',
+         night: 'snow-night'
+       }
+   }, 
+   {
+       code: 86,
+       icon: {
+         day: 'snow-day',
+         night: 'snow-night'
+       }
+   }, 
+   {
+       code: 95,
+       icon: {
+         day: 'thunder-rain-day',
+         night: 'thunder-rain-night'
+       }
+   }, 
+   {
+       code: 96,
+       icon: {
+         day: 'thunder-rain-day',
+         night: 'thunder-rain-night'
+       }
+   }, 
+   {
+       code: 99,
+       icon: {
+         day: 'thunder-rain-day',
+         night: 'thunder-rain-night'
+       }
+   },    
   ];
 
   mapIcon(weatherStatusCode: number, timeOfDay: TimeOfDay): IconKey {
