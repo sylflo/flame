@@ -16,7 +16,6 @@ const getExternalWeather = async () => {
   // Fetch data from external API
   try {
     const res = await axios.get('https://api.open-meteo.com/v1/forecast', { params });
-    // TODO weather code
     // Save weather data
     const cursor = res.data.current;
     const weatherData = await Weather.create({
