@@ -7,27 +7,30 @@ const getExternalWeather = async () => {
 
   // Fetch data from external API
   try {
-    const res = await axios.get(
-      `http://api.weatherapi.com/v1/current.json?key=${secret}&q=${lat},${long}`
-    );
+    const res = await axios.get('https://api.open-meteo.com/v1/forecast', { params: {
+      latitude: lat,
+      longitude: long,
+      current: ['is_day', 'temperature_2m', 'relative_humidity_2m', 'cloud_cover', 'wind_speed_10m', 'weathercode'],
+    } });
 
     // Save weather data
     const cursor = res.data.current;
     const weatherData = await Weather.create({
-      externalLastUpdate: cursor.last_updated,
-      tempC: cursor.temp_c,
-      tempF: cursor.temp_f,
-      isDay: cursor.is_day,
-      cloud: cursor.cloud,
-      conditionText: cursor.condition.text,
-      conditionCode: cursor.condition.code,
-      humidity: cursor.humidity,
-      windK: cursor.wind_kph,
-      windM: cursor.wind_mph,
+      externalLastUpdate: "externalLastUpdate",
+      tempC: cursor.temperature_2m, // can not be 0 put like minus kelvin
+      tempF: cursor.temperature_2m,
+      isDay: Boolean(cursor.is_day),
+      cloud: cursor.cloud_cover,
+      conditionText: "conditionText",
+      conditionCode: 1,
+      humidity: cursor.relative_humidity_2m,
+      windK: cursor.wind_speed_10m,
+      windM: cursor.wind_speed_10m,
     });
     return weatherData;
   } catch (err) {
-    throw new Error('External API request failed');
+    throw new Error(err);
+    //throw new Error('External API request failed');
   }
 };
 
