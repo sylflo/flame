@@ -41,7 +41,7 @@ export const WeatherSettings = (): JSX.Element => {
   const formSubmitHandler = async (e: FormEvent) => {
     e.preventDefault();
 
-    // Check for api key input
+    // Check if weather module is enabled
     if ((formData.lat || formData.long) && !formData.weather_enabled) {
       createNotification({
         title: 'Warning',
@@ -98,7 +98,6 @@ export const WeatherSettings = (): JSX.Element => {
   return (
     <form onSubmit={(e) => formSubmitHandler(e)}>
       <SettingsHeadline text="Enabled" />
-      {/* API KEY */}
       <InputGroup>
         <label htmlFor="enabled">Enable weather module</label>
         <input
