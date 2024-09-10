@@ -42,10 +42,10 @@ export const WeatherSettings = (): JSX.Element => {
     e.preventDefault();
 
     // Check for api key input
-    if ((formData.lat || formData.long) && !formData.WEATHER_API_KEY) {
+    if ((formData.lat || formData.long) && !formData.weather_enabled) {
       createNotification({
         title: 'Warning',
-        message: 'API key is missing. Weather Module will NOT work',
+        message: 'You need to enable the weather module to use it',
       });
     }
 
@@ -97,25 +97,19 @@ export const WeatherSettings = (): JSX.Element => {
 
   return (
     <form onSubmit={(e) => formSubmitHandler(e)}>
-      <SettingsHeadline text="API" />
+      <SettingsHeadline text="Enabled" />
       {/* API KEY */}
       <InputGroup>
-        <label htmlFor="WEATHER_API_KEY">API key</label>
+        <label htmlFor="enabled">Enable weather module</label>
         <input
-          type="text"
-          id="WEATHER_API_KEY"
-          name="WEATHER_API_KEY"
-          placeholder="secret"
-          value={formData.WEATHER_API_KEY}
+          type="checkbox"
+          id="weather_enabled"
+          name="weather_enabled"
+          checked={formData.weather_enabled}
           onChange={(e) => inputChangeHandler(e)}
         />
         <span>
-          Using
-          <a href="https://www.weatherapi.com/pricing.aspx" target="blank">
-            {' '}
-            Weather API
-          </a>
-          . Key is required for weather module to work.
+          Required for weather module to work.
         </span>
       </InputGroup>
 

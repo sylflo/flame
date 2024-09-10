@@ -3,7 +3,7 @@ const axios = require('axios');
 const loadConfig = require('./loadConfig');
 
 const getExternalWeather = async () => {
-  const { WEATHER_API_KEY: secret, lat, long } = await loadConfig();
+  const { lat, long } = await loadConfig();
 
   // Fetch data from external API
   try {
